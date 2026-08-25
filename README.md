@@ -10,10 +10,16 @@ It provides control over the start and end positions, curve shape, line appearan
 
 ## Installation
 
-Download, unzip, and install the `x3.live.line` package in your Max Packages folder:
+Download, unzip, and copy the `x3.live.line` package (the parent folder to help/init/javascript folders) into your Max Packages folder:
 
+Mac:
 ```
 ~/Documents/Max 9/Packages/
+```
+
+Win:
+```
+C:\Users\<username>\Documents\Max 9\Packages\
 ```
 
 Restart Max after installation.
@@ -23,10 +29,10 @@ Once installed, create the object with:
 ```
 x3.live.line
 ```
-Attributes (see below) can also be specified when creating the object:
+Attributes (see Examples below) can also be specified when creating the object:
 
 ```
-x3.live.line @start lt @end br @startstyle tee @endstyle arrow
+x3.live.line @jsarguments start lt end br startstyle tee endstyle arrow
 ```
 
 ---
@@ -65,7 +71,7 @@ The available endpoints are:
 For example:
 
 ```
-x3.live.line @start lt @end rb
+x3.live.line @jsarguments @start lt end rb
 ```
 
 … creates a connector that leaves the left side of the top-left corner and arrives at the right side of the bottom-right corner.
@@ -77,7 +83,8 @@ x3.live.line @start lt @end rb
 
 ## Attributes
 
-Attributes can be set via the object's Inspector, `attrui` objects, by sending messages to the object, or as a attribute-value pairs via `@jsarguments` (see Examples).
+> [!TIP]
+> Attributes can be set via the object's Inspector, `attrui` objects, by sending messages to the object, or as a attribute-value pairs via `@jsarguments` (see Examples).
 
 ### `start`
 

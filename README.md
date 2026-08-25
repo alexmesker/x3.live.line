@@ -375,6 +375,14 @@ A thicker connector with larger terminators:
 x3.live.line @jsarguments linewidth 4 terminatorsize 14 start rt end rb startstyle dot endstyle arrow linecolor 0 1 0 1
 ```
 
+
+A connection from top-left to right-top:
+<img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/77b41ab9-acbd-4a10-9eb4-4f1784e33e53" />
+
+```
+x3.live.line @jsarguments linewidth 2.5 terminatorsize 10 start tl end rt startstyle tee endstyle arrow linecolor 1 0.5 0 1
+```
+
 ## Messages
 
 The principal settings can also be changed by sending messages to the object:

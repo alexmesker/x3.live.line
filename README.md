@@ -1,7 +1,7 @@
 # x3.live.line
 
 
-> [!TIP]
+> [!NOTE]
 > A v8ui alternative to Max's `live.line` object with configurable corners, curved lines, and terminators
 
 `x3.live.line` is a custom UI object for [Cycling ’74 Max](https://cycling74.com) that draws curved connector lines between corners of a `v8ui` object.
@@ -24,9 +24,9 @@ x3.live.line
 ```
 Attributes (see below) can also be specified when creating the object:
 
-`x3.live.line @start lt @end br @startstyle tee @endstyle arrow`
+```x3.live.line @start lt @end br @startstyle tee @endstyle arrow```
 
---
+---
 
 ## Endpoints
 
@@ -38,219 +38,258 @@ For example:
 
 ```lt```
 
-… means the left side of the top-left corner, while:
+… means `left top` — the **left** side of the top-left corner, while:
 
 ```tl```
 
-… means the top side of the top-left corner. (These might seem like the same locations at first, but the order plays a key role in deciding how the terminators are displayed.)
+… means `top left` — the **top** side of the top-left corner. (These might seem like the same locations at first, but the order plays a key role in deciding how the terminators are displayed.)
 
 The available endpoints are:
 
-*tl	(Top edge, top-left corner)
-*lt	(Left edge, top-left corner)
-*tr	(Top edge, top-right corner)
-*rt	(Right edge, top-right corner)
-*bl	(Bottom edge, bottom-left corner)
-*lb	(Left edge, bottom-left corner)
-*br	(Bottom edge, bottom-right corner)
-*rb	(Right edge, bottom-right corner)
+* `tl`	(Top edge, top-left corner)
+* `lt`	(Left edge, top-left corner)
+* `tr`	(Top edge, top-right corner)
+* `rt`	(Right edge, top-right corner)
+* `bl`	(Bottom edge, bottom-left corner)
+* `lb`	(Left edge, bottom-left corner)
+* `br`	(Bottom edge, bottom-right corner)
+* `rb`	(Right edge, bottom-right corner)
 
 For example:
 
 ```x3.live.line @start lt @end rb```
 
-…creates a connector that leaves the left side of the top-left corner and arrives at the right side of the bottom-right corner.
+… creates a connector that leaves the left side of the top-left corner and arrives at the right side of the bottom-right corner.
+
+---
 
 
+## Attributes
 
-[TO RESUME]
-
-
-Attributes
-
-start
+### `start`
 
 Sets the starting endpoint.
 
-@start lt
+```@start lt```
 
 Default:
 
-lt
+```lt```
 
 Possible values:
 
-tl lt tr rt bl lb br rb
+```tl lt tr rt bl lb br rb```
 
-end
+---
+
+### `end`
 
 Sets the ending endpoint.
 
-@end rb
+```@end rb```
 
 Default:
 
-rb
+```rb```
 
 Possible values:
 
-tl lt tr rt bl lb br rb
+```tl lt tr rt bl lb br rb```
 
-shapemode
+---
+
+### `shapemode`
 
 Determines the general shape of the connector.
 
-@shapemode auto
+```@shapemode auto```
 
 Possible values:
 
-Value	Description
-auto	Automatically chooses an appropriate curve based on the endpoint directions
-arc	Forces a broad, single sweeping curve
-s	Forces an S-like curve
+* `auto` (Automatically chooses an appropriate curve based on the endpoint directions)
+* `arc`	(Forces a broad, single sweeping curve)
+* `s`	(Forces an S-like curve)
 
 Default:
 
-auto
+```auto```
 
-In most situations, auto is the recommended setting.
+In most situations, `auto` is the recommended setting.
 
-curve
+
+> [!NOTE]
+> ### Technical Detail
+> `shapemode` determines how the two endpoint directions influence the Bézier curve. There are three options:
+> 
+> * `arc` — produces a single broad bend. This is most natural when the endpoints are on adjacent/perpendicular sides, such as left → bottom or top → right. (arc tends to look like a conventional curved connector.)
+> * `s` — allows the curve to change direction, producing an S-like sweep. This is especially useful when connecting opposite sides, such as left → right or top → bottom, where you generally want the line to leave one endpoint in one direction and arrive naturally at the other.
+> * `auto` (default) — chooses between the two according to the endpoint sides (chooses s when the sides are opposite and arc otherwise).
+>
+> Use `arc` explicitly when you want a pronounced single sweep even though the endpoint arrangement would normally suggest an S. Use `s` explicitly when you deliberately want a softer S-shaped transition even though the endpoints aren’t on opposite sides.
+>
+> `curve` (see below) is independent of this: it controls how strongly the chosen shape bends, from 0 (essentially straight, depending on connector type) toward increasingly pronounced curvature.
+
+
+---
+
+
+### `curve`
 
 Controls the amount of curvature.
 
-@curve 0.5
+```@curve 0.5```
 
 Range:
 
-0.0 – 1.0
+```0.0 – 1.0```
 
 Default:
 
-0.5
+```0.5```
 
-A value of 0 produces a straight connection. Higher values progressively increase the curvature.
+A value of 0 produces a straight connection when using `dot`/`none` terminators (see `startstyle`/`endstyle` below), otherwise it produces a minimal curve). Higher values progressively increase the curvature.
 
-startstyle
+---
+
+
+### `startstyle`
 
 Sets the terminator at the beginning of the connector.
 
-@startstyle tee
+```@startstyle tee```
 
 Possible values:
 
+```
 none
 arrow
 dot
 circle
 tee
+```
 
 Default:
 
-none
+```none```
 
-endstyle
+---
+
+### `endstyle`
 
 Sets the terminator at the end of the connector.
 
-@endstyle arrow
+```@endstyle arrow```
 
 Possible values:
 
+```
 none
 arrow
 dot
 circle
 tee
+```
 
 Default:
 
-arrow
+```arrow```
 
-terminatorsize
+---
+
+### `terminatorsize`
 
 Controls the size of arrow, dot, circle, and tee terminators.
 
-@terminatorsize 8
+```@terminatorsize 8```
 
 Range:
 
-2 – 50
+```2 – 50```
 
 Default:
 
-8
+```8```
 
 The object’s internal inset is automatically adjusted to accommodate larger terminators.
 
-linewidth
+---
+
+
+### `linewidth`
 
 Sets the width of the connector line.
 
-@linewidth 2
+```@linewidth 2```
 
 Range:
 
-0.5 – 20
+```0.5 – 20```
 
 Default:
 
-2
+```2```
 
-linecolor
+---
+
+### `linecolor`
 
 Sets the RGBA color of the connector and its terminators.
 
-@linecolor 0.75 0.75 0.75 1
+```@linecolor 0.75 0.75 0.75 1```
 
 Values are specified as:
 
-red green blue alpha
+```red green blue alpha```
 
-with each component ranging from 0 to 1.
+… with each component ranging from 0 to 1.
 
 Default:
 
-0.75 0.75 0.75 1
+```0.75 0.75 0.75 1```
 
-bgcolor
+---
+
+### `bgcolor`
 
 Sets the RGBA background color of the object.
 
-@bgcolor 0 0 0 0
+```@bgcolor 0 0 0 0```
 
 Default:
 
-0 0 0 0
+```0 0 0 0```
 
 The default background is fully transparent.
 
-Examples
+---
+
+## Examples
 
 A simple curved line with an arrow:
 
-x3.live.line @start lt @end rb
+```x3.live.line @start lt @end rb```
 
 A connector with a tee at one end and an arrow at the other:
 
-x3.live.line @start rt @end bl @startstyle tee @endstyle arrow
+```x3.live.line @start rt @end bl @startstyle tee @endstyle arrow```
 
 A connector with hollow circles at both ends:
 
-x3.live.line @start tl @end br @startstyle circle @endstyle circle
+```x3.live.line @start tl @end br @startstyle circle @endstyle circle```
 
 A stronger S-shaped curve:
 
-x3.live.line @start lt @end rt @shapemode s @curve 0.8
+```x3.live.line @start lt @end rt @shapemode s @curve 0.8```
 
 A thicker connector with larger terminators:
 
-x3.live.line @linewidth 4 @terminatorsize 14
+```x3.live.line @linewidth 4 @terminatorsize 14```
 
-Messages
+## Messages
 
 The principal settings can also be changed by sending messages to the object:
 
+```
 start lt
 end rb
 shape auto
@@ -261,69 +300,32 @@ terminatorsize 8
 linewidth 2
 linecolor 0.75 0.75 0.75 1
 bgcolor 0 0 0 0
+```
 
 The object also understands:
 
-styles <startstyle> <endstyle>
+```styles <startstyle> <endstyle>```
 
 For example:
 
-styles circle arrow
+```styles circle arrow```
 
 and:
 
+```
 arrows none
 arrows start
 arrows end
 arrows both
+```
 
-for quickly configuring arrow terminators.
+… for quickly configuring arrow terminators.
+
+
 
 # Requirements
 
 * Cycling ’74 Max
 * v8ui
 
-x3.live.line is implemented in JavaScript using Max’s v8ui and mgraphics APIs.
-
-
-
-
-
---
-
-
-
-[In progress]
-
-
-## Attributes
-
-
-
-
-
-
-start
-
-
-end
-
-
-
-
-
-shapemode determines how the two endpoint directions influence the Bézier curve. There are three options:
-
-* arc — produces a single broad bend. This is most natural when the endpoints are on adjacent/perpendicular sides, such as left → bottom or top → right. (arc tends to look like a conventional curved connector.)
-* s — allows the curve to change direction, producing an S-like sweep. This is especially useful when connecting opposite sides, such as left → right or top → bottom, where you generally want the line to leave one endpoint in one direction and arrive naturally at the other.
-* auto (default) — chooses between the two according to the endpoint sides (chooses s when the sides are opposite and arc otherwise).
-
-
-auto should be 
-Use arc explicitly when you want a pronounced single sweep even though the endpoint arrangement would normally suggest an S. Use s explicitly when you deliberately want a softer S-shaped transition even though the endpoints aren’t on opposite sides.
-
-
-curve
-curve is independent of this: it controls how strongly the chosen shape bends, from 0 (essentially straight, depending on connector type) toward increasingly pronounced curvature.
-
+`x3.live.line` is implemented in JavaScript using Max’s `v8ui` and mgraphics APIs.

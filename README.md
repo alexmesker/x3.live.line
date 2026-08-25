@@ -377,7 +377,8 @@ x3.live.line @jsarguments linewidth 4 terminatorsize 14 start rt end rb startsty
 
 
 A connection from top-left to right-top:
-<img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/77b41ab9-acbd-4a10-9eb4-4f1784e33e53" />
+
+<img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/8f08787e-95d3-4b30-924e-461fb8696be1" />
 
 ```
 x3.live.line @jsarguments linewidth 2.5 terminatorsize 10 start tl end rt startstyle tee endstyle arrow linecolor 1 0.5 0 1

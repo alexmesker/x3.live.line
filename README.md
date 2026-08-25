@@ -2,7 +2,7 @@
 
 
 > [!NOTE]
-> A v8ui alternative to Max's `live.line` object with configurable corners, curved lines, and terminators
+> A v8ui alternative to Max's `live.line` object with configurable corners, curved lines, and terminators.
 
 `x3.live.line` is a custom UI object for [Cycling ’74 Max](https://cycling74.com) that draws curved connector lines between corners of a `v8ui` object.
 

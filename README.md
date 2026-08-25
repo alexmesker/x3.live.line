@@ -144,7 +144,7 @@ Default:
 In most situations, `auto` is the recommended setting.
 
 
-> [!NOTE]
+> >[!NOTE]
 > ### Technical Detail
 > `shapemode` determines how the two endpoint directions influence the Bézier curve. There are three options:
 > 
@@ -329,6 +329,7 @@ The default background is fully transparent.
 ## Examples
 
 A simple curved line with an arrow:
+
 <img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/b4d40a97-644f-4802-a9d4-e0116aa8e31a" />
 
 ```
@@ -336,24 +337,36 @@ x3.live.line @jsarguments start lt end rb
 ```
 
 A connector with a tee at one end and an arrow at the other:
+
 <img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/4f9eb72f-007c-4cac-a1db-bd0349bbb945" />
 
-```x3.live.line @jsarguments start rt end bl startstyle tee endstyle arrow```
+```
+x3.live.line @jsarguments start rt end bl startstyle tee endstyle arrow
+```
 
 A connector with hollow circles at both ends:
+
 <img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/115c73cd-4abe-4dd4-b1d3-3ebda7833a7c" />
 
-```x3.live.line @jsarguments start tl end br startstyle circle endstyle circle```
+```
+x3.live.line @jsarguments start tl end br startstyle circle endstyle circle
+```
 
 A stronger S-shaped curve:
+
 <img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/d4983a4a-bb01-4a3f-a4f0-977962255228" />
 
-```x3.live.line @jsarguments start lb end rt startstyle tee endstyle arrow shapemode s curve 1```
+```
+x3.live.line @jsarguments start lb end rt startstyle tee endstyle arrow shapemode s curve 1
+```
 
 A thicker connector with larger terminators:
+
 <img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/0ecac1d4-e6d2-4520-96cc-5852d831bc21" />
 
-```x3.live.line @jsarguments linewidth 4 terminatorsize 14 start rt end rb startstyle dot endstyle arrow linecolor 0 1 0 1```
+```
+x3.live.line @jsarguments linewidth 4 terminatorsize 14 start rt end rb startstyle dot endstyle arrow linecolor 0 1 0 1
+```
 
 ## Messages
 

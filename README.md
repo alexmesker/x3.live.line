@@ -151,7 +151,7 @@ Default:
 In most situations, `auto` is the recommended setting.
 
 
-> >[!NOTE]
+> [!NOTE]
 > ### Technical Detail
 > `shapemode` determines how the two endpoint directions influence the Bézier curve. There are three options:
 > 

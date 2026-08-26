@@ -172,7 +172,7 @@ In most situations, `auto` is the recommended setting.
 > * `s` — allows the curve to change direction, producing an S-like sweep. This is especially useful when connecting opposite sides, such as `left top` → `right bottom` or `top right` → `bottom left`, where you generally want the line to leave one endpoint in one direction and arrive naturally at the other.
 > * `auto` (default) — chooses between the two according to the endpoint sides (chooses `s` when the sides are opposite and `arc` otherwise).
 >
-> You can use `arc` explicitly when you want a pronounced single sweep even though the endpoint arrangement would normally suggest an S. Similarly, use `s` explicitly when you deliberately want a softer S-shaped transition even though the endpoints aren’t on opposite sides.
+> You can explicitly use `arc` when you want a pronounced single sweep even though the endpoint arrangement would normally suggest an S. Similarly, use `s` explicitly when you deliberately want a softer S-shaped transition even though the endpoints aren’t on opposite sides.
 >
 > `curve` (see below) is independent of this: it controls how strongly the chosen shape bends, from 0 (essentially straight, depending on connector type) toward increasingly pronounced curvature.
 

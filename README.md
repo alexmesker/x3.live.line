@@ -1,8 +1,15 @@
 # x3.live.line
 
 
-> [!NOTE]
-> A v8ui alternative to Max's `live.line` object with configurable corners, curved lines, and terminators.
+> [!IMPORTANT]
+> A `v8ui` alternative to Max's `live.line` object with configurable corners, curved lines, and terminators.
+
+
+<img width="956" height="527" alt="image" src="https://github.com/user-attachments/assets/9fd155b8-a416-4b53-893d-b8f6599b0130" />
+
+
+
+---
 
 `x3.live.line` is a custom UI object for [Cycling ’74 Max](https://cycling74.com) that draws curved connector lines between corners of a `v8ui` object.
 
@@ -10,7 +17,7 @@ It provides control over the start and end positions, curve shape, line appearan
 
 ## Installation
 
-Download, unzip, and copy the `x3.live.line` package (the parent folder to help/init/javascript folders) into your Max Packages folder:
+Download, unzip, and move the `x3.live.line` package (the parent folder to help/init/javascript folders) into your Max Packages folder:
 
 Mac:
 ```
@@ -29,6 +36,10 @@ Once installed, create the object with:
 ```
 x3.live.line
 ```
+
+
+
+
 Attributes (see Examples below) can also be specified when creating the object:
 
 ```
@@ -55,7 +66,7 @@ lt
 tl
 ```
 
-… means `top left` — the **top** side of the top-left corner. (These might seem like the same locations at first, but the order plays a key role in deciding how the terminators are displayed.)
+… means `top left` — the **top** side of the top-left corner. (These might seem like the same locations at first, but the order plays a key role in deciding how the terminators' directions are displayed.)
 
 The available endpoints are:
 
@@ -70,13 +81,15 @@ The available endpoints are:
 
 For example:
 
+
+
 ```
 x3.live.line @jsarguments @start lt end rb
 ```
 
 … creates a connector that leaves the left side of the top-left corner and arrives at the right side of the bottom-right corner.
 
-
+<img width="112" height="112" alt="image" src="https://github.com/user-attachments/assets/b4d40a97-644f-4802-a9d4-e0116aa8e31a" />
 
 
 

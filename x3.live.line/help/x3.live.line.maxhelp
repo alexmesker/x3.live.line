@@ -9,8 +9,72 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 120.0, 291.0, 1117.0, 790.0 ],
+        "rect": [ 100.0, 100.0, 1117.0, 790.0 ],
         "boxes": [
+            {
+                "box": {
+                    "border": 0,
+                    "embed": 0,
+                    "embedstate": [
+                        [ "bgcolor", 0, 0, 0, 0 ],
+                        [ "curve", 1 ],
+                        [ "end", "tr" ],
+                        [ "endstyle", "tee" ],
+                        [ "linecolor", 0.4470588235294118, 0.4470588235294118, 0.3607843137254902, 1 ],
+                        [ "linewidth", 2 ],
+                        [ "shapemode", "auto" ],
+                        [ "start", "tl" ],
+                        [ "startstyle", "tee" ],
+                        [ "terminatorsize", 8 ]
+                    ],
+                    "filename": "x3.live.line.js",
+                    "id": "obj-4",
+                    "maxclass": "v8ui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 558.0, 253.0, 225.0, 77.0 ],
+                    "textfile": {
+                        "filename": "x3.live.line.js",
+                        "flags": 0,
+                        "embed": 0,
+                        "autowatch": 1
+                    }
+                }
+            },
+            {
+                "box": {
+                    "border": 0,
+                    "embed": 0,
+                    "embedstate": [
+                        [ "bgcolor", 0, 0, 0, 0 ],
+                        [ "curve", 0.5 ],
+                        [ "end", "br" ],
+                        [ "endstyle", "arrow" ],
+                        [ "linecolor", 1, 0.9882352941176471, 0, 1 ],
+                        [ "linewidth", 2 ],
+                        [ "shapemode", "auto" ],
+                        [ "start", "bl" ],
+                        [ "startstyle", "none" ],
+                        [ "terminatorsize", 8 ]
+                    ],
+                    "filename": "x3.live.line.js",
+                    "id": "obj-2",
+                    "maxclass": "v8ui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 472.0, 141.0, 80.0, 80.0 ],
+                    "textfile": {
+                        "filename": "x3.live.line.js",
+                        "flags": 0,
+                        "embed": 0,
+                        "autowatch": 1
+                    }
+                }
+            },
             {
                 "box": {
                     "id": "obj-124",
@@ -18,9 +82,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 667.0, 92.0, 75.0, 47.0 ],
-                    "text": "Alex Mesker 2026\nx37v.com",
-                    "textjustification": 2
+                    "patching_rect": [ 22.0, 716.0, 191.0, 47.0 ],
+                    "text": "Alex Mesker, 2026\nx37v.com\ngithub.com/alexmesker/x3.live.line"
                 }
             },
             {
@@ -30,7 +93,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 190.0, 218.0, 312.0, 47.0 ],
+                    "patching_rect": [ 188.0, 223.0, 313.0, 47.0 ],
                     "text": "It provides control over the start and end positions, curve shape, line appearance, and a selection of endpoint terminators (including arrows, circles, dots, and tees)."
                 }
             },
@@ -43,7 +106,7 @@
                     "numoutlets": 4,
                     "outlettype": [ "", "int", "", "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 677.0, 641.0, 362.0, 90.0 ],
+                    "patching_rect": [ 677.0, 641.0, 361.0, 78.0 ],
                     "text": "x3.live.line @jsarguments start lt end rb startstyle none endstyle arrow curve 0.5 shapemode auto linewidth 2 terminatorsize 12 linecolor 0 0.61358 0.711763 1 bgcolor 0 0 0 0"
                 }
             },
@@ -1001,7 +1064,7 @@
                             }
                         ]
                     },
-                    "patching_rect": [ 677.0, 606.0, 84.0, 22.0 ],
+                    "patching_rect": [ 677.0, 608.0, 84.0, 22.0 ],
                     "text": "p jsarguments"
                 }
             },
@@ -1052,7 +1115,6 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 677.0, 617.0, 32.0, 22.0 ],
-                                    "presentation_linecount": 2,
                                     "text": "auto"
                                 }
                             },
@@ -1097,7 +1159,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 283.0, 617.0, 29.5, 22.0 ],
-                                    "text": "16"
+                                    "text": "14"
                                 }
                             },
                             {
@@ -1108,7 +1170,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 89.0, 617.0, 29.5, 22.0 ],
-                                    "text": "4"
+                                    "text": "3"
                                 }
                             },
                             {
@@ -1207,7 +1269,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 179.5, 559.0, 75.0, 35.0 ],
+                                    "patching_rect": [ 179.5, 559.0, 76.0, 35.0 ],
                                     "text": "pattrforward parent::end"
                                 }
                             },
@@ -1609,14 +1671,14 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 301.0, 190.0, 211.0, 20.0 ],
+                    "patching_rect": [ 674.0, 225.0, 211.0, 20.0 ],
                     "saved_attribute_attributes": {
                         "textcolor": {
-                            "expression": "themecolor.live_lcd_control_fg"
+                            "expression": "themecolor.theme_syntax_objectcolor"
                         }
                     },
                     "text": "v8ui @filename x3.live.line @border 0",
-                    "textcolor": [ 0.9319483953950521, 0.7717444591937832, 0.5238837564054122, 1.0 ]
+                    "textcolor": [ 0.9565903523274274, 0.7661489178616099, 0.4528340909165927, 1.0 ]
                 }
             },
             {
@@ -1626,7 +1688,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
-                    "patching_rect": [ 265.0, 189.0, 29.5, 22.0 ],
+                    "patching_rect": [ 624.0, 224.0, 29.5, 22.0 ],
                     "text": "=="
                 }
             },
@@ -1683,8 +1745,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 15.0, 96.0, 497.0, 50.0 ],
-                    "presentation_linecount": 9,
+                    "patching_rect": [ 15.0, 96.0, 498.0, 50.0 ],
                     "text": "x3.live.line is a UI object that draws curved connector lines between corners of a v8ui object. \nIt's a general-purpose object for adding illustrative connections between parts of a patcher like this."
                 }
             },
@@ -1717,8 +1778,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AQ"
+                    }
                 }
             },
             {
@@ -1750,8 +1810,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AP"
+                    }
                 }
             },
             {
@@ -1783,8 +1842,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AO"
+                    }
                 }
             },
             {
@@ -1816,8 +1874,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AN"
+                    }
                 }
             },
             {
@@ -1849,8 +1906,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AM"
+                    }
                 }
             },
             {
@@ -1882,8 +1938,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AL"
+                    }
                 }
             },
             {
@@ -1915,8 +1970,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AK"
+                    }
                 }
             },
             {
@@ -1948,8 +2002,7 @@
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AJ"
+                    }
                 }
             },
             {
@@ -1958,14 +2011,14 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 193.0, 190.0, 75.0, 20.0 ],
+                    "patching_rect": [ 535.0, 225.0, 75.0, 20.0 ],
                     "saved_attribute_attributes": {
                         "textcolor": {
-                            "expression": "themecolor.live_lcd_control_fg"
+                            "expression": "themecolor.theme_syntax_objectcolor"
                         }
                     },
                     "text": "x3.live.line   ",
-                    "textcolor": [ 0.9319483953950521, 0.7717444591937832, 0.5238837564054122, 1.0 ]
+                    "textcolor": [ 0.9565903523274274, 0.7661489178616099, 0.4528340909165927, 1.0 ]
                 }
             },
             {
@@ -1991,14 +2044,13 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 65.0, 128.0, 121.0, 83.0 ],
+                    "patching_rect": [ 65.0, 128.0, 121.0, 115.0 ],
                     "textfile": {
                         "filename": "x3.live.line.js",
                         "flags": 0,
                         "embed": 0,
                         "autowatch": 1
-                    },
-                    "varname": "v8ui_AH"
+                    }
                 }
             },
             {
@@ -2010,7 +2062,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 703.0, 357.0, 150.0, 22.0 ],
+                    "patching_rect": [ 712.0, 375.0, 150.0, 22.0 ],
                     "varname": "terminatorsize"
                 }
             },
@@ -2023,7 +2075,8 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 385.0, 357.0, 150.0, 22.0 ],
+                    "patching_rect": [ 368.0, 375.0, 159.0, 22.0 ],
+                    "text_width": 85.0,
                     "varname": "endstyle"
                 }
             },
@@ -2036,7 +2089,8 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 385.0, 326.0, 150.0, 22.0 ],
+                    "patching_rect": [ 368.0, 343.0, 159.0, 22.0 ],
+                    "text_width": 85.0,
                     "varname": "startstyle"
                 }
             },
@@ -2049,7 +2103,8 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 227.0, 357.0, 150.0, 22.0 ],
+                    "patching_rect": [ 227.0, 375.0, 125.0, 22.0 ],
+                    "text_width": 66.0,
                     "varname": "end"
                 }
             },
@@ -2062,7 +2117,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 562.0, 412.0, 226.66667342185974, 22.0 ],
+                    "patching_rect": [ 543.0, 416.0, 310.0, 22.0 ],
                     "varname": "linecolor"
                 }
             },
@@ -2107,7 +2162,8 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 227.0, 326.0, 150.0, 22.0 ],
+                    "patching_rect": [ 227.0, 343.0, 125.0, 22.0 ],
+                    "text_width": 66.0,
                     "varname": "start"
                 }
             },
@@ -2120,7 +2176,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 543.0, 357.0, 150.0, 22.0 ],
+                    "patching_rect": [ 543.0, 375.0, 150.0, 22.0 ],
                     "varname": "shapemode"
                 }
             },
@@ -2145,7 +2201,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 703.0, 326.0, 150.0, 22.0 ],
+                    "patching_rect": [ 712.0, 343.0, 150.0, 22.0 ],
                     "varname": "linewidth"
                 }
             },
@@ -2158,7 +2214,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 543.0, 326.0, 150.0, 22.0 ],
+                    "patching_rect": [ 543.0, 343.0, 150.0, 22.0 ],
                     "varname": "curve"
                 }
             },
@@ -2169,7 +2225,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 190.0, 189.0, 70.0, 22.0 ]
+                    "patching_rect": [ 534.0, 224.0, 70.0, 22.0 ]
                 }
             },
             {
@@ -2179,7 +2235,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 299.0, 189.0, 214.37209904193878, 22.0 ]
+                    "patching_rect": [ 673.0, 224.0, 215.0, 22.0 ]
                 }
             },
             {
@@ -2191,7 +2247,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 562.0, 443.0, 226.66667342185974, 22.0 ]
+                    "patching_rect": [ 543.0, 449.0, 310.0, 22.0 ]
                 }
             },
             {
@@ -2203,7 +2259,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 51.0, 357.0, 150.0, 22.0 ]
+                    "patching_rect": [ 58.0, 343.0, 150.0, 22.0 ]
                 }
             },
             {
@@ -2264,6 +2320,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-38", 0 ],
+                    "hidden": 1,
                     "source": [ "obj-119", 0 ]
                 }
             },

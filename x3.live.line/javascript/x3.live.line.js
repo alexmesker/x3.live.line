@@ -8,11 +8,12 @@ mgraphics.autofill = 0;
 
 /*
 x3.live.line for v8ui
-v.2607202044
+v1.0.0 (2608270903)
 
 Alex Mesker
 x37v.com
 max-tricks.com
+github.com/alexmesker/x3.live.line
 */
 
 
@@ -241,12 +242,12 @@ declareattribute(
 		style: "enum",
 		enumvals: [
 			"tl",
-			"lt",
 			"tr",
-			"rt",
 			"bl",
+			"bl",
+			"lt",
 			"lb",
-			"br",
+			"rt",
 			"rb"
 		],
 		default: "lt",
@@ -266,12 +267,12 @@ declareattribute(
 		style: "enum",
 		enumvals: [
 			"tl",
-			"lt",
 			"tr",
-			"rt",
 			"bl",
-			"lb",
 			"br",
+			"lt",
+			"lb",
+			"rt",
 			"rb"
 		],
 		default: "rb",

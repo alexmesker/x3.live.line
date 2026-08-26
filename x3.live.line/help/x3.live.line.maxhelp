@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1117.0, 790.0 ],
+        "rect": [ 613.0, 206.0, 1117.0, 790.0 ],
         "boxes": [
             {
                 "box": {
@@ -1064,7 +1064,7 @@
                             }
                         ]
                     },
-                    "patching_rect": [ 677.0, 608.0, 84.0, 22.0 ],
+                    "patching_rect": [ 727.0, 608.0, 84.0, 22.0 ],
                     "text": "p jsarguments"
                 }
             },
@@ -2293,6 +2293,17 @@
                         "autowatch": 1
                     }
                 }
+            },
+            {
+                "box": {
+                    "id": "obj-5",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 677.0, 608.0, 40.0, 22.0 ],
+                    "text": "select"
+                }
             }
         ],
         "lines": [
@@ -2443,6 +2454,12 @@
                     "destination": [ "obj-38", 0 ],
                     "hidden": 1,
                     "source": [ "obj-46", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-114", 0 ],
+                    "source": [ "obj-5", 0 ]
                 }
             },
             {

@@ -116,7 +116,7 @@ lt
 Possible values:
 
 ```
-tl lt tr rt bl lb br rb
+tl tr bl br lt lb rt rb
 ```
 
 ---
@@ -138,7 +138,7 @@ rb
 Possible values:
 
 ```
-tl lt tr rt bl lb br rb
+tl tr bl br lt lb rt rb
 ```
 
 ---
